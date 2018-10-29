@@ -20,6 +20,8 @@ $ echo 'alias setpr="source setproxy.sh $@"'
 hoge=hogehoge.jp:0000
 ```
 
+デフォルトでhogeと僕の学校のプロキシ設定であるkosenが用意されています。
+
 あとはコマンドを叩くだけです
 ```bash
 $ setpr hoge
