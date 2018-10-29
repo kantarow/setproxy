@@ -30,4 +30,4 @@ https://hogehoge.jp:0000
 http://hogehoge.jp:0000
 ```
 
-bashとgitのコンフィグの設定が書き換わります。
+bashとgitのプロキシ設定が書き換わります。
