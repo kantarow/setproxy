@@ -2,15 +2,22 @@
 
 . $SET_PROXY/config
 
-if [ $# = 0 ]
-then
+if [ $# -le 2 ]; then
 	unset http_proxy
 	unset https_proxy
 	echo Deleted https and http proxy
+
+	git config --global --unset http.proxy
+	git config --global --unset https.proxy
 else
-	proxy=$1
-	export https_proxy="https://${!proxy}"
-	export http_proxy="http://${!proxy}"
-	
-	export | grep -E "https_proxy|http_proxy"
+	arg=$3
+	proxy=${!arg}
+	export http_proxy="http://${proxy}"
+	export https_proxy="https://${proxy}"
+
+	git config --global http.proxy http://${proxy}
+	git config --global https.proxy https://${proxy}
+
+	echo https://${proxy}
+	echo http://${proxy}
 fi
