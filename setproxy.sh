@@ -3,6 +3,8 @@
 . $SET_PROXY/config
 
 if [ $# -le 2 ]; then
+	echo please key as argment
+elif [ $3 = clear ]; then
 	unset http_proxy
 	unset https_proxy
 	echo Deleted https and http proxy
