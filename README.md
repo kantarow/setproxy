@@ -8,7 +8,7 @@
 ```bash
 $ git clone https://github.com/kantarow/setproxy.git ~/.setproxy
 $ echo 'export SET_PROXY="$HOME/.setproxy"' >> ~/.bashrc
-$ echo 'export PATH="$PATH:SET_PROXY"' >> ~/.bashrc
+$ echo 'export PATH="$PATH:$SET_PROXY"' >> ~/.bashrc
 $ echo 'alias setpr="source setproxy.sh $@"' >> ~/.bashrc
 $ source ~/.bashrc
 ```
